@@ -3,9 +3,10 @@ class Sliding_window_maximum {
     public static void main(String[] args){
         int arr[] = {1,3,-1,-3,5,3,6,7};
         int k= 3;
-        maxSlidingWindow(arr,k);
+        int[] res = maxSlidingWindow(arr,k);
+        System.out.println(Arrays.toString(res));
     }
-    public int[] maxSlidingWindow(int[] nums, int k) {
+    public static int[] maxSlidingWindow(int[] nums, int k) {
         int n = nums.length;
         int[] result = new int[n - k + 1];
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> b[0] - a[0]);
